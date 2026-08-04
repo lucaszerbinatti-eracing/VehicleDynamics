@@ -1,0 +1,18 @@
+# Cache e arquivos de compilação do Simulink
+slprj/
+*.slxc
+
+# Arquivos de backup automático do MATLAB
+*.asv
+*.autosave
+*~
+
+# Arquivos compilados em C/C++ (se vocês já geraram código)
+*.mexw64
+*.mexa64
+*.exe
+*.dll
+
+# Arquivos de log de erro
+crash_dumps/
+matlab_crash_dump*

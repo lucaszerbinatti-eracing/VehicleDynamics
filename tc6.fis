@@ -1,0 +1,72 @@
+[System]
+Name='tc6'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=28
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='Slip'
+Range=[0 1]
+NumMFs=4
+MF1='Z':'gaussmf',[0.1 0.05]
+MF2='B':'gaussmf',[0.1 0.2]
+MF3='M':'gaussmf',[0.12 0.4]
+MF4='A':'gaussmf',[0.15 0.7]
+
+[Input2]
+Name='Slip derivate'
+Range=[-15 15]
+NumMFs=7
+MF1='NB':'gaussmf',[3 -10]
+MF2='NM':'gaussmf',[2.5 -5]
+MF3='NS':'gaussmf',[1.8 -1]
+MF4='Z':'gaussmf',[2 0]
+MF5='PS':'gaussmf',[2 3.5]
+MF6='PM':'gaussmf',[2.5 7.5]
+MF7='PB':'gaussmf',[3 12]
+
+[Output1]
+Name='output1'
+Range=[-0.5 1]
+NumMFs=4
+MF1='None':'gaussmf',[0.07 -0.3]
+MF2='L':'gaussmf',[0.08 0.14]
+MF3='M':'gaussmf',[0.1 0.5]
+MF4='A':'gaussmf',[0.2 0.85]
+
+[Rules]
+1 1, 1 (1) : 1
+2 1, 1 (1) : 1
+3 1, 1 (1) : 1
+1 2, 1 (1) : 1
+2 2, 1 (1) : 1
+3 2, 1 (1) : 1
+1 3, 1 (1) : 1
+2 3, 1 (1) : 1
+3 3, 2 (1) : 1
+4 1, 2 (1) : 1
+4 2, 3 (1) : 1
+4 3, 3 (1) : 1
+4 4, 4 (1) : 1
+1 4, 1 (1) : 1
+2 4, 2 (1) : 1
+3 4, 3 (1) : 1
+1 5, 1 (1) : 1
+1 6, 2 (1) : 1
+1 7, 3 (1) : 1
+2 5, 3 (1) : 1
+2 6, 3 (1) : 1
+2 7, 4 (1) : 1
+3 5, 3 (1) : 1
+3 6, 4 (1) : 1
+3 7, 4 (1) : 1
+4 5, 4 (1) : 1
+4 6, 4 (1) : 1
+4 7, 4 (1) : 1
